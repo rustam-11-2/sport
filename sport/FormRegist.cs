@@ -12,9 +12,19 @@ namespace sport
 {
     public partial class FormRegist : Form
     {
-        public FormRegist()
+        string sectionName;
+        public FormRegist(string Name)
         {
             InitializeComponent();
+            sectionName = Name;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBoxFio != null && textBoxAge != null && textBoxPhone != null)
+            {
+
+            }
         }
     }
 }
