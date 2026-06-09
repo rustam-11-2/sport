@@ -12,6 +12,8 @@ namespace sport
         public string SectionName { get; set; }
         public int MaxCountParticipants { get; set; }
 
+        public List<Participant> Participants { get; set; }
+
         public SporstSection(string coach, string sectionName, int maxCountParticipants) 
         {
             CoachName = coach;
