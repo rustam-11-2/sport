@@ -28,59 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewSections = new System.Windows.Forms.DataGridView();
+            this.SectionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoachName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxCountParticipants = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSections)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewSections
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(119, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(342, 201);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewSections.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SectionName,
+            this.CoachName,
+            this.MaxCountParticipants});
+            this.dataGridViewSections.Location = new System.Drawing.Point(119, 67);
+            this.dataGridViewSections.Name = "dataGridViewSections";
+            this.dataGridViewSections.Size = new System.Drawing.Size(342, 201);
+            this.dataGridViewSections.TabIndex = 0;
+            this.dataGridViewSections.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSections_CellClick);
             // 
-            // Column1
+            // SectionName
             // 
-            this.Column1.HeaderText = "Название секции";
-            this.Column1.Name = "Column1";
+            this.SectionName.HeaderText = "Название секции";
+            this.SectionName.Name = "SectionName";
             // 
-            // Column2
+            // CoachName
             // 
-            this.Column2.HeaderText = "Тренер";
-            this.Column2.Name = "Column2";
+            this.CoachName.HeaderText = "Тренер";
+            this.CoachName.Name = "CoachName";
             // 
-            // Column3
+            // MaxCountParticipants
             // 
-            this.Column3.HeaderText = "Доступно мест";
-            this.Column3.Name = "Column3";
+            this.MaxCountParticipants.HeaderText = "Доступно мест";
+            this.MaxCountParticipants.Name = "MaxCountParticipants";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewSections);
             this.Name = "Form1";
             this.Text = "Main";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSections)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridView dataGridViewSections;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SectionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoachName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaxCountParticipants;
     }
 }
 

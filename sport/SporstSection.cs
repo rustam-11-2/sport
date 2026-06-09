@@ -8,11 +8,11 @@ namespace sport
 {
     public class SporstSection
     {
-        public string CoachName { get; set; }
         public string SectionName { get; set; }
+        public string CoachName { get; set; }
         public int MaxCountParticipants { get; set; }
 
-        public List<Participant> Participants { get; set; }
+        public List<Participant> Participants { get; set; } = new List<Participant>();
 
         public SporstSection(string coach, string sectionName, int maxCountParticipants) 
         {
@@ -20,6 +20,5 @@ namespace sport
             SectionName = sectionName;
             MaxCountParticipants = maxCountParticipants;
         }
-
     }
 }
